@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 /* Dia 1*/
 /* 1- Prueba mostrar formulario nuevo bookmark */
@@ -8,3 +8,15 @@
     3.2 Variable que contenga toda la información del li por cada uno de los enlaces
     3.3 Añadir esa info con el innerHTML por cada uno de los enlaces
 */
+
+// <section class="data-actions__add hidden"></section>
+
+const newBookmark = document.querySelector('.data-actions__add');
+
+newBookmark.classList.remove('hidden');
+
+const menu = document.querySelector(".menudropdown")
+
+menu.classList.remove("collapsed")
+
+
