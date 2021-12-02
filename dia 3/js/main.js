@@ -1,7 +1,20 @@
 "use strict"
 
-const listLinks = document.querySelector(".js-datalist");
-const data = document.querySelector(".js-data");
+const listLinks = document.querySelector(".js_datalist");
+const board_data = document.querySelector(".js-data");
+const menuDropdown = document.querySelector('.js-menudropdown');
+const input_search_desc = document.querySelector('.js-input-search');
+
+/* DIA3.2 Se muestra el menú hamburguesa */
+
+menuDropdown.classList.remove('collapsed');
+
+/* DIA3.2 Simulamos que escribe la usuaria */
+
+input_search_desc.value = 'materiales';
+
+const descrSearchText = input_search_desc.value;
+
 
 const bmk_1_url =
   "https://books.adalab.es/materiales-del-curso-n/-MdR6Gp68BX20m1pi0z2/modulo-2-programando-la-web/javascript/2_1_intro_a_la_programacion";
@@ -10,8 +23,10 @@ const bmk_1_seen = "checked";
 const bmk_1_tags_1 = "javascript";
 const bmk_1_tags_2 = "html";
 
+let html = '';
 
-let html = `<li class="data__listitem"> 
+if (bmk_1_desc.includes(descrSearchText)) {
+  html = `<li class="data__listitem"> 
 <article class="data__item">
   <p class="item__url">
     <a href=${bmk_1_url.replace("https://", "")} target="_blank" rel="noopener noreferrer">
@@ -27,6 +42,9 @@ let html = `<li class="data__listitem">
   </ul>
 </article>
 </li>`;
+}
+
+
 
 const bmk_2_url = 'https://thesmartcoder.dev/9-awesome-projects-you-can-build-with-vanilla-javascript/';
 const bmk_2_desc = 'Ideas de proyectos JS';
@@ -34,7 +52,9 @@ const bmk_2_seen = 'checked';
 const bmk_2_tags_1 = 'javascript';
 const bmk_2_tags_2 = 'portfolio';
 
-html += `<li class="data__listitem"> 
+if (bmk_2_desc.includes(descrSearchText)) {
+
+  html += `<li class="data__listitem"> 
 <article class="data__item">
   <p class="item__url">
     <a href=${bmk_2_url} target="_blank" rel="noopener noreferrer">
@@ -50,13 +70,17 @@ html += `<li class="data__listitem">
   </ul>
 </article>
 </li>`;
+}
 
 const bmk_3_url = 'https://books.adalab.es/materiales-del-curso-n/-MdR6Gp68BX20m1pi0z2/modulo-1-html-y-css/1_1_intro_a_la_web';
 const bmk_3_desc = 'HTML en los materiales de Adalab';
 const bmk_3_seen = '';
 const bmk_3_tags_1 = 'HTML';
 const bmk_3_tags_2 = 'CSS';
-html += `<li class="data__listitem"> 
+
+if (bmk_3_desc.includes(descrSearchText)) {
+
+  html += `<li class="data__listitem"> 
 <article class="data__item">
   <p class="item__url">
     <a href=${bmk_3_url} target="_blank" rel="noopener noreferrer">
@@ -72,27 +96,21 @@ html += `<li class="data__listitem">
   </ul>
 </article>
 </li>`;
+}
 
 
 listLinks.innerHTML = html;
 
-//<section class="data tableview"></section>
+/* DIA3.1: Prueba mostrar lista */
 
-
-if (data.classList.contains("tableview")) {
-  data.classList.remove("tableview");
-  data.classList.add("listview");
+if (board_data.classList.contains('tableview')) {
+  board_data.classList.remove('tableview');
+  board_data.classList.add('listview');
 }
-else if (data.classList.contains('listview')) {
-  data.classList.remove('listview');
-  data.classList.add('tableview');
+else if (board_data.classList.contains('listview')) {
+  board_data.classList.remove('listview');
+  board_data.classList.add('tableview');
 }
-
-
-
-
-
-
 
 
 
