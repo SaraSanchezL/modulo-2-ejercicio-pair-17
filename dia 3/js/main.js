@@ -1,5 +1,7 @@
 "use strict"
 
+// En este he usado las clases que estaban ya puestas en el html del dia 3, para que coincidiera, sino se me quedaba todo en blanco. 
+
 const listLinks = document.querySelector(".js_datalist");
 const board_data = document.querySelector(".js-data");
 const menuDropdown = document.querySelector('.js-menudropdown');
