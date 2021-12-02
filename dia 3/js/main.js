@@ -9,13 +9,13 @@ const input_search_desc = document.querySelector('.js-input-search');
 
 /* DIA3.2 Se muestra el menú hamburguesa */
 
-menuDropdown.classList.remove('collapsed');
+ menuDropdown.classList.remove('collapsed');
 
 /* DIA3.2 Simulamos que escribe la usuaria */
 
-input_search_desc.value = 'materiales';
+ input_search_desc.value = 'materiales';
 
-const descrSearchText = input_search_desc.value;
+const descrSearchText = input_search_desc.value; 
 
 
 const bmk_1_url =
@@ -98,7 +98,7 @@ if (bmk_3_desc.includes(descrSearchText)) {
   </ul>
 </article>
 </li>`;
-}
+ }
 
 
 listLinks.innerHTML = html;
