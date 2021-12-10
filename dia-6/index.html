@@ -24,24 +24,24 @@
       </nav>
       <h1 class="header__title">Ada-bookmarks</h1>
     </header>
-    <form class="menudropdown collapsed js-menudropdown">
+    <form class="menudropdown collapsed js_menu_dropdown">
       <fieldset class="menu__data-search">
         <h2 class="menu__title">Búsqueda</h2>
         <label class="data-search__epigraph" for="search_desc">Buscar por descripción:
-          <input class="data-search__tag js-input-search" type="text" name="search_desc" id="search_desc" /></label>
+          <input class="data-search__tag" type="text" name="search_desc" id="search_desc" /></label>
         <h3 class="data-search__epigraph">Buscar por etiquetas:</h3>
-        <label class="data-search__tag" for="search_desc"><input type="checkbox" name="search_tags"
+        <label class="data-search__tag" for="search_tags_javascript"><input type="checkbox" name="search_tags"
             id="search_tags_javascript" />
           <small class="data-search__hidden-label-text">Buscar por etiqueta </small>javascipt</label>
-        <label class="data-search__tag" for="search_desc"><input type="checkbox" name="search_tags"
-            id="search_tags_portfolio" />
+        <label class="data-search__tag" for="search_tags_portfolio">
+          <input type="checkbox" name="search_tags" id="search_tags_portfolio" />
           <small class="data-search__hidden-label-text">Buscar por etiqueta </small>portfolio</label>
-        <label class="data-search__tag" for="search_desc"><input type="checkbox" name="search_tags"
-            id="search_tags_portfolio" />
+        <label class="data-search__tag" for="search_tags_html">
+          <input type="checkbox" name="search_tags" id="search_tags_html" />
           <small class="data-search__hidden-label-text">Buscar por etiqueta </small>html</label>
-        <label class="data-search__epigraph" for="search_desc">
+        <label class="data-search__epigraph" for="search_seen">
           Buscar bookmarks de los profes:
-          <select class="data-search__tag" name="search_desc" id="search_desc">
+          <select class="data-search__tag" name="search_seen" id="search_seen">
             <option disabled selected>Escoge una opción:</option>
             <option value="all">Todas</option>
             <option value="seen">Leído</option>
@@ -62,19 +62,19 @@
     </form>
     <main class="main">
       <h2>Lista de enlaces</h2>
-      <section class="data js-data tableview">
+      <section class="data tableview js_boarddata">
         <div class="data__header">
           <div>URL</div>
           <div>Leída</div>
           <div>Despcripción</div>
           <div>Etiquetas</div>
         </div>
-
-        <ul class="data__list js_datalist"></ul>
-
+        <ul class="data__list js_list_data">
+          <li>Cargando datos...</li>
+        </ul>
         <div class="data__actions">
-          <section class="data-actions__add hidden js-data-actions">
-            <button class="data-actions__button-add" title="Crear un nuevo bookmark">
+          <section class="data-actions__add hidden js_section_add">
+            <button class="data-actions__button-add js_button_add" title="Crear un nuevo bookmark">
               <i class="fas fa-plus data-actions__button-add--icon"></i><span
                 class="data-actions__button-add--label">Nueva</span>
             </button>
